@@ -888,51 +888,68 @@ public class MatchingGame extends javax.swing.JFrame {
                 if (change[0] == 0) {
                     Card1.setIcon(done);
                     change[0] = 2;
+                    
                 } else if (change[1] == 0) {
                     Card2.setIcon(done);
                     change[1] = 2;
+                    txtInstruction.setText("Congradulations");
+                    
                 } else if (change[2] == 0) {
                     Card3.setIcon(done);
                     change[2] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[3] == 0) {
                     Card4.setIcon(done);
                     change[3] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[4] == 0) {
                     Card5.setIcon(done);
                     change[4] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[5] == 0) {
                     Card6.setIcon(done);
                     change[5] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[6] == 0) {
                     Card7.setIcon(done);
                     change[6] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[7] == 0) {
                     Card8.setIcon(done);
                     change[7] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[8] == 0) {
                     Card9.setIcon(done);
                     change[8] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[9] == 0) {
                     Card10.setIcon(done);
                     change[9] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[10] == 0) {
                     Card11.setIcon(done);
                     change[10] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[11] == 0) {
                     Card12.setIcon(done);
                     change[11] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[12] == 0) {
                     Card13.setIcon(done);
                     change[12] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[13] == 0) {
                     Card14.setIcon(done);
                     change[13] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[14] == 0) {
                     Card15.setIcon(done);
                     change[14] = 2;
+                    txtInstruction.setText("Congradulations");
                 } else if (change[15] == 0) {
                     Card16.setIcon(done);
                     change[15] = 2;
+                    txtInstruction.setText("Congradulations");
                 } 
             }
         }
