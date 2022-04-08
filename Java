@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 
+// Change window name 
+// Change Title name to have no spaces 
+// Show gradulations when game is done
+// Remove buttons and just put reset 
+// Change Icons 
+// Make sure all buttons are the same size 
+// Game should auto start
 
 import java.util.*;
 import javax.swing.ImageIcon;
@@ -29,7 +36,7 @@ public class MatchingGame extends javax.swing.JFrame {
    
     ImageIcon back = new ImageIcon("cardback.jpg");
     ImageIcon done = new ImageIcon("done.jpg");
-    int count, c1, c2, card1, card2;
+    int count, c1, c2, Card1, Card2;
     int cardsLeft = 12;
     int[] change = new int[12];
 
@@ -50,111 +57,112 @@ public class MatchingGame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainTitle = new javax.swing.JLabel();
-        Card1 = new javax.swing.JButton();
-        Card2 = new javax.swing.JButton();
-        Card3 = new javax.swing.JButton();
-        Card4 = new javax.swing.JButton();
-        Card5 = new javax.swing.JButton();
-        Card6 = new javax.swing.JButton();
-        Card7 = new javax.swing.JButton();
-        Card8 = new javax.swing.JButton();
-        Card9 = new javax.swing.JButton();
-        Card10 = new javax.swing.JButton();
-        Card11 = new javax.swing.JButton();
-        Card12 = new javax.swing.JButton();
+        card1 = new javax.swing.JButton();
+        card2 = new javax.swing.JButton();
+        card3 = new javax.swing.JButton();
+        card4 = new javax.swing.JButton();
+        card5 = new javax.swing.JButton();
+        card6 = new javax.swing.JButton();
+        card7 = new javax.swing.JButton();
+        card8 = new javax.swing.JButton();
+        card9 = new javax.swing.JButton();
+        card10 = new javax.swing.JButton();
+        card11 = new javax.swing.JButton();
+        card12 = new javax.swing.JButton();
         btnPlay = new javax.swing.JButton();
         btuGuessAgain = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         txtInstruction = new javax.swing.JTextField();
+        txtInstruction.setEditable(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Matching Game");
+        setTitle("Matching Falgs Game");
 
         mainTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         mainTitle.setForeground(new java.awt.Color(255, 0, 0));
-        mainTitle.setText("Matching  Flags Game");
+        mainTitle.setText("Matching Flags Game");
 
-        Card1.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card1.addActionListener(new java.awt.event.ActionListener() {
+        card1.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card1ActionPerformed(evt);
+                card1ActionPerformed(evt);
             }
         });
 
-        Card2.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card2.addActionListener(new java.awt.event.ActionListener() {
+        card2.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card2ActionPerformed(evt);
+                card2ActionPerformed(evt);
             }
         });
 
-        Card3.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card3.addActionListener(new java.awt.event.ActionListener() {
+        card3.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card3ActionPerformed(evt);
+                card3ActionPerformed(evt);
             }
         });
 
-        Card4.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card4.addActionListener(new java.awt.event.ActionListener() {
+        card4.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card4ActionPerformed(evt);
+                card4ActionPerformed(evt);
             }
         });
 
-        Card5.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card5.addActionListener(new java.awt.event.ActionListener() {
+        card5.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card5ActionPerformed(evt);
+                card5ActionPerformed(evt);
             }
         });
 
-        Card6.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card6.addActionListener(new java.awt.event.ActionListener() {
+        card6.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card6ActionPerformed(evt);
+                card6ActionPerformed(evt);
             }
         });
 
-        Card7.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card7.addActionListener(new java.awt.event.ActionListener() {
+        card7.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card7ActionPerformed(evt);
+                card7ActionPerformed(evt);
             }
         });
 
-        Card8.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card8.addActionListener(new java.awt.event.ActionListener() {
+        card8.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card8ActionPerformed(evt);
+                card8ActionPerformed(evt);
             }
         });
 
-        Card9.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card9.addActionListener(new java.awt.event.ActionListener() {
+        card9.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card9ActionPerformed(evt);
+                card9ActionPerformed(evt);
             }
         });
 
-        Card10.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card10.addActionListener(new java.awt.event.ActionListener() {
+        card10.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card10ActionPerformed(evt);
+                card10ActionPerformed(evt);
             }
         });
 
-        Card11.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card11.addActionListener(new java.awt.event.ActionListener() {
+        card11.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card11ActionPerformed(evt);
+                card11ActionPerformed(evt);
             }
         });
 
-        Card12.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
-        Card12.addActionListener(new java.awt.event.ActionListener() {
+        card12.setIcon(new javax.swing.ImageIcon("cardback.jpg")); // NOI18N
+        card12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Card12ActionPerformed(evt);
+                card12ActionPerformed(evt);
             }
         });
 
@@ -194,20 +202,20 @@ public class MatchingGame extends javax.swing.JFrame {
         						.addGap(180))
         					.addGroup(layout.createSequentialGroup()
         						.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        							.addComponent(Card5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(Card1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE))
+        							.addComponent(card5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        							.addComponent(card1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE))
         						.addGap(18)
         						.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        							.addComponent(Card2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(Card6, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE))
+        							.addComponent(card2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        							.addComponent(card6, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE))
         						.addGap(18)
         						.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        							.addComponent(Card3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(Card7, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE))
+        							.addComponent(card3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        							.addComponent(card7, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE))
         						.addGap(18)
         						.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        							.addComponent(Card4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(Card8, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE))))
+        							.addComponent(card4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        							.addComponent(card8, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE))))
         				.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
         					.addGroup(layout.createSequentialGroup()
         						.addComponent(btnPlay)
@@ -216,13 +224,13 @@ public class MatchingGame extends javax.swing.JFrame {
         						.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         						.addComponent(btnExit))
         					.addGroup(layout.createSequentialGroup()
-        						.addComponent(Card9, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(card9, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
         						.addGap(18)
-        						.addComponent(Card10, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(card10, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE)
         						.addGap(18)
-        						.addComponent(Card11)
+        						.addComponent(card11)
         						.addGap(18)
-        						.addComponent(Card12))))
+        						.addComponent(card12))))
         			.addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -233,23 +241,23 @@ public class MatchingGame extends javax.swing.JFrame {
         			.addGroup(layout.createParallelGroup(Alignment.LEADING)
         				.addGroup(layout.createSequentialGroup()
         					.addGap(1)
-        					.addComponent(Card4, GroupLayout.PREFERRED_SIZE, 117, GroupLayout.PREFERRED_SIZE))
+        					.addComponent(card4, GroupLayout.PREFERRED_SIZE, 117, GroupLayout.PREFERRED_SIZE))
         				.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        					.addComponent(Card2, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
-        					.addComponent(Card1, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
-        					.addComponent(Card3, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)))
+        					.addComponent(card2, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
+        					.addComponent(card1, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
+        					.addComponent(card3, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)))
         			.addGap(18)
         			.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        				.addComponent(Card8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        				.addComponent(Card5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        				.addComponent(Card6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        				.addComponent(Card7, GroupLayout.PREFERRED_SIZE, 116, GroupLayout.PREFERRED_SIZE))
+        				.addComponent(card8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(card5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(card6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(card7, GroupLayout.PREFERRED_SIZE, 116, GroupLayout.PREFERRED_SIZE))
         			.addGap(18)
         			.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        				.addComponent(Card12, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        				.addComponent(Card9, GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-        				.addComponent(Card10, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        				.addComponent(Card11, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        				.addComponent(card12, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(card9, GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+        				.addComponent(card10, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(card11, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         			.addGap(45)
         			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
         				.addComponent(btnPlay)
@@ -293,23 +301,24 @@ public class MatchingGame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnPlayActionPerformed
 
-    private void Card1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card1ActionPerformed
+    private void card1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card1ActionPerformed
         // TODO add your handling code here:
-        
+    	 
+    	 
         String temp = cards.get(0);
         
         if (temp.equals("0")) {
-            Card1.setIcon(a);
+            card1.setIcon(a);
         } else if (temp.equals("1")) {
-            Card1.setIcon(b);
+            card1.setIcon(b);
         } else if (temp.equals("2")) {
-            Card1.setIcon(c);
+            card1.setIcon(c);
         } else if (temp.equals("3")) {
-            Card1.setIcon(d);
+            card1.setIcon(d);
         } else if (temp.equals("4")) {
-            Card1.setIcon(e);
+            card1.setIcon(e);
         } else if (temp.equals("5")) {
-            Card1.setIcon(f);
+            card1.setIcon(f);
         } 
         
         count++;
@@ -321,25 +330,25 @@ public class MatchingGame extends javax.swing.JFrame {
             change[0] = 0;
         }
         
-    }//GEN-LAST:event_Card1ActionPerformed
+    }//GEN-LAST:event_card1ActionPerformed
 
-    private void Card2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card2ActionPerformed
+    private void card2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card2ActionPerformed
         // TODO add your handling code here:
                 
         String temp = cards.get(1);
         
         if (temp.equals("0")) {
-            Card2.setIcon(a);
+            card2.setIcon(a);
         } else if (temp.equals("1")) {
-            Card2.setIcon(b);
+            card2.setIcon(b);
         } else if (temp.equals("2")) {
-            Card2.setIcon(c);
+            card2.setIcon(c);
         } else if (temp.equals("3")) {
-            Card2.setIcon(d);
+            card2.setIcon(d);
         } else if (temp.equals("4")) {
-            Card2.setIcon(e);
+            card2.setIcon(e);
         } else if (temp.equals("5")) {
-            Card2.setIcon(f);
+            card2.setIcon(f);
         } 
         count++;
         if (count == 1) {
@@ -349,25 +358,25 @@ public class MatchingGame extends javax.swing.JFrame {
             c2 = Integer.parseInt(temp);
             change[1] = 0;
         }
-    }//GEN-LAST:event_Card2ActionPerformed
+    }//GEN-LAST:event_card2ActionPerformed
 
-    private void Card3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card3ActionPerformed
+    private void card3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card3ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(2);
         
         if (temp.equals("0")) {
-            Card3.setIcon(a);
+            card3.setIcon(a);
         } else if (temp.equals("1")) {
-            Card3.setIcon(b);
+            card3.setIcon(b);
         } else if (temp.equals("2")) {
-            Card3.setIcon(c);
+            card3.setIcon(c);
         } else if (temp.equals("3")) {
-            Card3.setIcon(d);
+            card3.setIcon(d);
         } else if (temp.equals("4")) {
-            Card3.setIcon(e);
+            card3.setIcon(e);
         } else if (temp.equals("5")) {
-            Card3.setIcon(f);
+            card3.setIcon(f);
         } 
         count++;
         if (count == 1) {
@@ -377,25 +386,25 @@ public class MatchingGame extends javax.swing.JFrame {
             c2 = Integer.parseInt(temp);
             change[2] = 0;
         }
-    }//GEN-LAST:event_Card3ActionPerformed
+    }//GEN-LAST:event_card3ActionPerformed
 
-    private void Card5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card5ActionPerformed
+    private void card5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card5ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(4);
         
         if (temp.equals("0")) {
-            Card5.setIcon(a);
+            card5.setIcon(a);
         } else if (temp.equals("1")) {
-            Card5.setIcon(b);
+            card5.setIcon(b);
         } else if (temp.equals("2")) {
-            Card5.setIcon(c);
+            card5.setIcon(c);
         } else if (temp.equals("3")) {
-            Card5.setIcon(d);
+            card5.setIcon(d);
         } else if (temp.equals("4")) {
-            Card5.setIcon(e);
+            card5.setIcon(e);
         } else if (temp.equals("5")) {
-            Card5.setIcon(f);
+            card5.setIcon(f);
         } 
         
         count++;
@@ -403,29 +412,32 @@ public class MatchingGame extends javax.swing.JFrame {
             c1 = Integer.parseInt(temp);
             change[4] = 0;
         } else if (count == 2) {
+        	if (change[4] == 0) {
+        		count--; 
             c2 = Integer.parseInt(temp);
             change[4] = 0;
+        	}
         }
         
-    }//GEN-LAST:event_Card5ActionPerformed
+    }//GEN-LAST:event_card5ActionPerformed
 
-    private void Card4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card4ActionPerformed
+    private void card4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card4ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(3);
         
         if (temp.equals("0")) {
-            Card4.setIcon(a);
+            card4.setIcon(a);
         } else if (temp.equals("1")) {
-            Card4.setIcon(b);
+            card4.setIcon(b);
         } else if (temp.equals("2")) {
-            Card4.setIcon(c);
+            card4.setIcon(c);
         } else if (temp.equals("3")) {
-            Card4.setIcon(d);
+            card4.setIcon(d);
         } else if (temp.equals("4")) {
-            Card4.setIcon(e);
+            card4.setIcon(e);
         } else if (temp.equals("5")) {
-            Card4.setIcon(f);
+            card4.setIcon(f);
         }
         
         count++;
@@ -436,26 +448,26 @@ public class MatchingGame extends javax.swing.JFrame {
             c2 = Integer.parseInt(temp);
             change[3] = 0;
         }
-    }//GEN-LAST:event_Card4ActionPerformed
+    }//GEN-LAST:event_card4ActionPerformed
 
-    private void Card6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card6ActionPerformed
+    private void card6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card6ActionPerformed
         // TODO add your handling code here:
         
         
         String temp = cards.get(5);
         
         if (temp.equals("0")) {
-            Card6.setIcon(a);
+            card6.setIcon(a);
         } else if (temp.equals("1")) {
-            Card6.setIcon(b);
+            card6.setIcon(b);
         } else if (temp.equals("2")) {
-            Card6.setIcon(c);
+            card6.setIcon(c);
         } else if (temp.equals("3")) {
-            Card6.setIcon(d);
+            card6.setIcon(d);
         } else if (temp.equals("4")) {
-            Card6.setIcon(e);
+            card6.setIcon(e);
         } else if (temp.equals("5")) {
-            Card6.setIcon(f);
+            card6.setIcon(f);
         } 
         
         count++;
@@ -468,25 +480,25 @@ public class MatchingGame extends javax.swing.JFrame {
         }
         
         
-    }//GEN-LAST:event_Card6ActionPerformed
+    }//GEN-LAST:event_card6ActionPerformed
 
-    private void Card7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card7ActionPerformed
+    private void card7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card7ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(6);
         
         if (temp.equals("0")) {
-            Card7.setIcon(a);
+            card7.setIcon(a);
         } else if (temp.equals("1")) {
-            Card7.setIcon(b);
+            card7.setIcon(b);
         } else if (temp.equals("2")) {
-            Card7.setIcon(c);
+            card7.setIcon(c);
         } else if (temp.equals("3")) {
-            Card7.setIcon(d);
+            card7.setIcon(d);
         } else if (temp.equals("4")) {
-            Card7.setIcon(e);
+            card7.setIcon(e);
         } else if (temp.equals("5")) {
-            Card7.setIcon(f);
+            card7.setIcon(f);
         } 
         
         count++;
@@ -498,26 +510,26 @@ public class MatchingGame extends javax.swing.JFrame {
             change[6] = 0;
         }
         
-    }//GEN-LAST:event_Card7ActionPerformed
+    }//GEN-LAST:event_card7ActionPerformed
 
-    private void Card8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card8ActionPerformed
+    private void card8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card8ActionPerformed
         // TODO add your handling code here:
         
         
         String temp = cards.get(7);
         
         if (temp.equals("0")) {
-            Card8.setIcon(a);
+            card8.setIcon(a);
         } else if (temp.equals("1")) {
-            Card8.setIcon(b);
+            card8.setIcon(b);
         } else if (temp.equals("2")) {
-            Card8.setIcon(c);
+            card8.setIcon(c);
         } else if (temp.equals("3")) {
-            Card8.setIcon(d);
+            card8.setIcon(d);
         } else if (temp.equals("4")) {
-            Card8.setIcon(e);
+            card8.setIcon(e);
         } else if (temp.equals("5")) {
-            Card8.setIcon(f);
+            card8.setIcon(f);
         }
         
         count++;
@@ -529,25 +541,25 @@ public class MatchingGame extends javax.swing.JFrame {
             change[7] = 0;
         }
         
-    }//GEN-LAST:event_Card8ActionPerformed
+    }//GEN-LAST:event_card8ActionPerformed
 
-    private void Card9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card9ActionPerformed
+    private void card9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card9ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(8);
         
         if (temp.equals("0")) {
-            Card9.setIcon(a);
+            card9.setIcon(a);
         } else if (temp.equals("1")) {
-            Card9.setIcon(b);
+            card9.setIcon(b);
         } else if (temp.equals("2")) {
-            Card9.setIcon(c);
+            card9.setIcon(c);
         } else if (temp.equals("3")) {
-            Card9.setIcon(d);
+            card9.setIcon(d);
         } else if (temp.equals("4")) {
-            Card9.setIcon(e);
+            card9.setIcon(e);
         } else if (temp.equals("5")) {
-            Card9.setIcon(f);
+            card9.setIcon(f);
         } 
         
         count++;
@@ -559,25 +571,25 @@ public class MatchingGame extends javax.swing.JFrame {
             change[8] = 0;
         }
         
-    }//GEN-LAST:event_Card9ActionPerformed
+    }//GEN-LAST:event_card9ActionPerformed
 
-    private void Card10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card10ActionPerformed
+    private void card10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card10ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(9);
         
         if (temp.equals("0")) {
-            Card10.setIcon(a);
+            card10.setIcon(a);
         } else if (temp.equals("1")) {
-            Card10.setIcon(b);
+            card10.setIcon(b);
         } else if (temp.equals("2")) {
-            Card10.setIcon(c);
+            card10.setIcon(c);
         } else if (temp.equals("3")) {
-            Card10.setIcon(d);
+            card10.setIcon(d);
         } else if (temp.equals("4")) {
-            Card10.setIcon(e);
+            card10.setIcon(e);
         } else if (temp.equals("5")) {
-            Card10.setIcon(f);
+            card10.setIcon(f);
         } 
         
         count++;
@@ -588,25 +600,25 @@ public class MatchingGame extends javax.swing.JFrame {
             c2 = Integer.parseInt(temp);
             change[9] = 0;
         }
-    }//GEN-LAST:event_Card10ActionPerformed
+    }//GEN-LAST:event_card10ActionPerformed
 
-    private void Card11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card11ActionPerformed
+    private void card11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card11ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(10);
         
         if (temp.equals("0")) {
-            Card11.setIcon(a);
+            card11.setIcon(a);
         } else if (temp.equals("1")) {
-            Card11.setIcon(b);
+            card11.setIcon(b);
         } else if (temp.equals("2")) {
-            Card11.setIcon(c);
+            card11.setIcon(c);
         } else if (temp.equals("3")) {
-            Card11.setIcon(d);
+            card11.setIcon(d);
         } else if (temp.equals("4")) {
-            Card11.setIcon(e);
+            card11.setIcon(e);
         } else if (temp.equals("5")) {
-            Card11.setIcon(f);
+            card11.setIcon(f);
         } 
         count++;
         if (count == 1) {
@@ -617,25 +629,25 @@ public class MatchingGame extends javax.swing.JFrame {
             change[10] = 0;
         }
         
-    }//GEN-LAST:event_Card11ActionPerformed
+    }//GEN-LAST:event_card11ActionPerformed
 
-    private void Card12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Card12ActionPerformed
+    private void card12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_card12ActionPerformed
         // TODO add your handling code here:
         
         String temp = cards.get(11);
         
         if (temp.equals("0")) {
-            Card12.setIcon(a);
+            card12.setIcon(a);
         } else if (temp.equals("1")) {
-            Card12.setIcon(b);
+            card12.setIcon(b);
         } else if (temp.equals("2")) {
-            Card12.setIcon(c);
+            card12.setIcon(c);
         } else if (temp.equals("3")) {
-            Card12.setIcon(d);
+            card12.setIcon(d);
         } else if (temp.equals("4")) {
-            Card12.setIcon(e);
+            card12.setIcon(e);
         } else if (temp.equals("5")) {
-            Card12.setIcon(f);
+            card12.setIcon(f);
         } 
         
         count++;
@@ -647,7 +659,7 @@ public class MatchingGame extends javax.swing.JFrame {
             change[11] = 0;
         }
         
-    }//GEN-LAST:event_Card12ActionPerformed
+    }//GEN-LAST:event_card12ActionPerformed
 
     private void btuGuessAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btuGuessAgainActionPerformed
         // TODO add your handling code here:
@@ -656,52 +668,52 @@ public class MatchingGame extends javax.swing.JFrame {
         if (c1 == c2) {
             for (int y = 1; y <= 2; y++) {
                 if (change[0] == 0) {
-                    Card1.setIcon(done);
+                    card1.setIcon(done);
                     change[0] = 2;
                     
                 } else if (change[1] == 0) {
-                    Card2.setIcon(done);
+                    card2.setIcon(done);
                     change[1] = 2;
                     txtInstruction.setText("Congratulations");
                     
                 } else if (change[2] == 0) {
-                    Card3.setIcon(done);
+                    card3.setIcon(done);
                     change[2] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[3] == 0) {
-                    Card4.setIcon(done);
+                    card4.setIcon(done);
                     change[3] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[4] == 0) {
-                    Card5.setIcon(done);
+                    card5.setIcon(done);
                     change[4] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[5] == 0) {
-                    Card6.setIcon(done);
+                    card6.setIcon(done);
                     change[5] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[6] == 0) {
-                    Card7.setIcon(done);
+                    card7.setIcon(done);
                     change[6] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[7] == 0) {
-                    Card8.setIcon(done);
+                    card8.setIcon(done);
                     change[7] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[8] == 0) {
-                    Card9.setIcon(done);
+                    card9.setIcon(done);
                     change[8] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[9] == 0) {
-                    Card10.setIcon(done);
+                    card10.setIcon(done);
                     change[9] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[10] == 0) {
-                    Card11.setIcon(done);
+                    card11.setIcon(done);
                     change[10] = 2;
                     txtInstruction.setText("Congratulations");
                 } else if (change[11] == 0) {
-                    Card12.setIcon(done);
+                    card12.setIcon(done);
                     change[11] = 2;
                     txtInstruction.setText("Congratulations");
                 } 
@@ -712,40 +724,40 @@ public class MatchingGame extends javax.swing.JFrame {
             for (int z = 1; z <= 2; z++) {
 
                 if (change[0] == 0) {
-                    Card1.setIcon(back);
+                    card1.setIcon(back);
                     change[0] = 1;
                 } else if (change[1] == 0) {
-                    Card2.setIcon(back);
+                    card2.setIcon(back);
                     change[1] = 1;
                 } else if (change[2] == 0) {
-                    Card3.setIcon(back);
+                    card3.setIcon(back);
                     change[2] = 1;
                 } else if (change[3] == 0) {
-                    Card4.setIcon(back);
+                    card4.setIcon(back);
                     change[3] = 1;
                 } else if (change[4] == 0) {
-                    Card5.setIcon(back);
+                    card5.setIcon(back);
                     change[4] = 1;
                 } else if (change[5] == 0) {
-                    Card6.setIcon(back);
+                    card6.setIcon(back);
                     change[5] = 1;
                 } else if (change[6] == 0) {
-                    Card7.setIcon(back);
+                    card7.setIcon(back);
                     change[6] = 1;
                 } else if (change[7] == 0) {
-                    Card8.setIcon(back);
+                    card8.setIcon(back);
                     change[7] = 1;
                 } else if (change[8] == 0) {
-                    Card9.setIcon(back);
+                    card9.setIcon(back);
                     change[8] = 1;
                 } else if (change[9] == 0) {
-                    Card10.setIcon(back);
+                    card10.setIcon(back);
                     change[9] = 1;
                 } else if (change[10] == 0) {
-                    Card11.setIcon(back);
+                    card11.setIcon(back);
                     change[10] = 1;
                 } else if (change[11] == 0) {
-                    Card12.setIcon(back);
+                    card12.setIcon(back);
                     change[11] = 1;
                 }                    
             }
@@ -788,18 +800,18 @@ public class MatchingGame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Card1;
-    private javax.swing.JButton Card10;
-    private javax.swing.JButton Card11;
-    private javax.swing.JButton Card12;
-    private javax.swing.JButton Card2;
-    private javax.swing.JButton Card3;
-    private javax.swing.JButton Card4;
-    private javax.swing.JButton Card5;
-    private javax.swing.JButton Card6;
-    private javax.swing.JButton Card7;
-    private javax.swing.JButton Card8;
-    private javax.swing.JButton Card9;
+    private javax.swing.JButton card1;
+    private javax.swing.JButton card10;
+    private javax.swing.JButton card11;
+    private javax.swing.JButton card12;
+    private javax.swing.JButton card2;
+    private javax.swing.JButton card3;
+    private javax.swing.JButton card4;
+    private javax.swing.JButton card5;
+    private javax.swing.JButton card6;
+    private javax.swing.JButton card7;
+    private javax.swing.JButton card8;
+    private javax.swing.JButton card9;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnPlay;
     private javax.swing.JButton btuGuessAgain;
